@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Interactive Indian Art Forms Map — SVVSNS Raja</title>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <!-- MAP COLUMN -->
+    <div class="map-card">
+      <div class="map-header">
+        <div>
+          <div class="map-title">Interactive Map of Indian Art Forms</div>
+          <div class="subtext">Click markers to read about the art.</div>
+        </div>
+        <div class="controls">
+          <input id="search" type="search" placeholder="Search art form or place...">
+          <button id="reset">Reset</button>
+        </div>
+      </div>
+
+      <div class="map-wrap" id="mapWrap">
+        <div class="tooltip" id="tooltip"></div>
+
+        <!-- SVG MAP -->
+        <svg id="map-svg" class="svg-stage" viewBox="0 0 1000 1200" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <linearGradient id="landGrad" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0" stop-color="#fbf3e6"/>
+              <stop offset="1" stop-color="#fff8f0"/>
+            </linearGradient>
+          </defs>
+
+          <rect width="100%" height="100%" fill="transparent"></rect>
+
+          <!-- placeholder land shape -->
+          <g id="land" transform="translate(30,30)">
+            <path d="M40 250 C 40 140, 160 40, 300 60 C 430 80, 520 20, 640 80 C 760 140, 810 300, 760 410 C 720 500, 580 520, 520 610 C 480 680, 420 760, 320 760 C 220 760, 120 700, 80 620 C 40 540, 60 400, 40 250 Z"
+              fill="url(#landGrad)" stroke="#d9cbb8" stroke-width="3" />
+          </g>
+
+          <g id="markers"></g>
+        </svg>
+      </div>
+      <div class="footer-line">
+        <div class="tip">Tip: Scroll to zoom, drag to pan.</div>
+        <div class="credit">Done By – SVVSNS Raja (RA2311003012334)</div>
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <h3>Art Forms</h3>
+      <div class="subtext">Filter and browse Indian art forms.</div>
+
+      <div class="filter-group" id="filterGroup"></div>
+      <div id="listings"></div>
+    </aside>
+  </div>
+
+  <!-- modal -->
+  <div class="modal" id="modal">
+    <div class="card">
+      <button id="closeModal">Close</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
