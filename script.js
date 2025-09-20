@@ -7,7 +7,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '© OpenStreetMap contributors'
 }).addTo(map);
 
-// Locations data (including temples and new locations)
+// Locations data
 var locations = [
   {
     name: "Ajanta Caves",
@@ -38,32 +38,6 @@ var locations = [
     name: "Shantiniketan",
     coords: [23.6815, 87.6850],
     info: "<b>Shantiniketan</b><br>Founded by Rabindranath Tagore<br>Center of Bengal School of Art"
-  },
-  // New Locations (Museums, Galleries, etc.)
-  {
-    name: "National Gallery of Modern Art",
-    coords: [28.6185, 77.2090],
-    info: "<b>National Gallery of Modern Art</b><br>Located in New Delhi<br>Holds Indian modern art collections"
-  },
-  {
-    name: "Chhatrapati Shivaji Maharaj Vastu Sangrahalaya",
-    coords: [18.9230, 72.8335],
-    info: "<b>Chhatrapati Shivaji Maharaj Vastu Sangrahalaya</b><br>Located in Mumbai<br>Art, culture, and history museum"
-  },
-  {
-    name: "Delhi Haat",
-    coords: [28.5355, 77.2456],
-    info: "<b>Delhi Haat</b><br>A marketplace and cultural center<br>Showcases traditional Indian crafts and arts"
-  },
-  {
-    name: "Rajasthan State Museum",
-    coords: [26.9152, 75.8553],
-    info: "<b>Rajasthan State Museum</b><br>Located in Jaipur<br>Displays Rajasthani art and cultural heritage"
-  },
-  {
-    name: "The Kala Ghoda Arts Festival",
-    coords: [18.9353, 72.8258],
-    info: "<b>The Kala Ghoda Arts Festival</b><br>Located in Mumbai<br>Annual festival celebrating Indian arts, crafts, and culture"
   }
 ];
 
